@@ -8,6 +8,7 @@ disable=
       C0301, # Line too long (105/100) (line-too-long)
       w3101, # Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (missing-timeout)
       R0903, # Too few public methods (1/2) (too-few-public-methods)
+      W0221
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
