@@ -16,7 +16,7 @@ class ExtractHtml:
             essential_information = self.__html_collector.collect_essential_information(html_information["html"])
             
             return ExtractContract(
-                raw_infomation_content=essential_information,
+                raw_information_content=essential_information,
                 extraction_date=date.today()
             )
         except Exception as exception:
