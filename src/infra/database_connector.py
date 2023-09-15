@@ -8,9 +8,9 @@ class DatabaseConnection:
     def connect(cls):
         db_connection = mysql.connect(
             host = "localhost",
-            port = 3300,
+            port = 3306,
             database = "pipeline_db",
             user = "root",
-            passwd = "my-pw"
+            passwd = "Oracle42"
         )
         cls.connection = db_connection
