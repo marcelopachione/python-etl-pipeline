@@ -1,7 +1,6 @@
-from .database_connector import DatabaseConnector
+from .database_connector import DatabaseConnection
 
 def test_connect():
-    assert DatabaseConnector.connection is None
-    DatabaseConnector.connect()
-    assert DatabaseConnector.connection is not None
-    
+    assert DatabaseConnection.connection is None
+    DatabaseConnection.connect()
+    assert DatabaseConnection.connection is not None

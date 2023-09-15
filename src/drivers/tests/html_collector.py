@@ -6,4 +6,3 @@ class HtmlCollectorSpy():
     def collect_essential_information(self, html: str):
         self.collect_essential_information_attributes["html"] = html
         return [{ "name": 'someName', "link": 'https://something.com' }]
-    

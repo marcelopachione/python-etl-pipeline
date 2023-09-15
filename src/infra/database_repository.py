@@ -1,9 +1,8 @@
 from typing import Dict
-from .database_connector import DatabaseConnector
-#from .interface.database_repository import DatabaseRepositoryInterface
+from .database_connector import DatabaseConnection
+from .interface.database_repository import DatabaseRepositoryInterface
 
-#class DatabaseRepository(DatabaseRepositoryInterface):
-class DatabaseRepository():
+class DatabaseRepository(DatabaseRepositoryInterface):
 
     @classmethod
     def insert_artist(cls, data: Dict) -> None:
@@ -14,8 +13,7 @@ class DatabaseRepository():
                 (%s, %s, %s, %s, %s, %s)
         '''
 
-        cursor = DatabaseConnector.connection.cursor()
+        cursor = DatabaseConnection.connection.cursor()
         cursor.execute(query, list(data.values()))
 
-        DatabaseConnector.connection.commit()
-        
+        DatabaseConnection.connection.commit()
